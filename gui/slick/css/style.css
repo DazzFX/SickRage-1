@@ -1780,8 +1780,7 @@ select .selected {
     width: 220px !important;
 }
 
-.infoTableHeader,
-.infoTableCell {
+.infoTable tr td {
     padding: 5px;
 }
 
@@ -1789,7 +1788,7 @@ select .selected {
     border-top: 1px dotted rgb(102, 102, 102);
 }
 
-.infoTableHeader {
+.infoTable tr td:first-child {
     vertical-align: top;
 }
 
