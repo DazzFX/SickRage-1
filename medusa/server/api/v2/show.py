@@ -1,18 +1,19 @@
 # coding=utf-8
 """Request handler for shows."""
 
-import os
 import datetime
+import os
 
 import medusa as app
-from .base import BaseRequestHandler
-from .... import db, helpers, network_timezones, sbdatetime, image_cache
+
+from .... import db, helpers, image_cache, network_timezones, sbdatetime
 from ....common import Quality, statusStrings
-from ....helper.encoding import ek
 from ....helper.common import dateFormat, try_int
+from ....helper.encoding import ek
 from ....helper.quality import get_quality_string
 from ....server.api.v1.core import _map_quality
 from ....show.Show import Show
+from .base import BaseRequestHandler
 
 MILLIS_YEAR_1900 = datetime.datetime(year=1900, month=1, day=1).toordinal()
 
