@@ -45,7 +45,7 @@ var startVue = function(){
         methods: {
             anonRedirect: function(e){
                 e.preventDefault();
-                window.open(e.target.href, '_blank');
+                window.open(MEDUSA.info.anonRedirect + e.target.href, '_blank');
             }
         }
     });

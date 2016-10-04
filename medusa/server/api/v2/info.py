@@ -90,7 +90,8 @@ class InfoHandler(BaseRequestHandler):
             'webRoot': app.WEB_ROOT,
             'githubUrl': app.GITHUB_IO_URL,
             'wikiUrl': app.WIKI_URL,
-            'sourceUrl': app.APPLICATION_URL
+            'sourceUrl': app.APPLICATION_URL,
+            'displayAllSeasons': app.DISPLAY_ALL_SEASONS
         }
 
         if info_query:

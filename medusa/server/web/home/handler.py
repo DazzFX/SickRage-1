@@ -740,7 +740,8 @@ class Home(WebRoot):
             [show_obj.indexerid, min_season]
         )
 
-        t = PageTemplate(rh=self, filename='displayShow.mako')
+        # @TODO: /home/displayShow?show={show_id} will be replace with /show/{show_id}
+        t = PageTemplate(rh=self, filename='show.mako')
         submenu = [{
             'title': 'Edit',
             'path': 'home/editShow?show={show}'.format(show=show_obj.indexerid),

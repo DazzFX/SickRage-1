@@ -74,7 +74,9 @@ $.ajax({
     MEDUSA.info = data;
     MEDUSA.info.themeSpinner = MEDUSA.info.themeName === 'dark' ? '-dark' : '';
     MEDUSA.info.loading = '<img src="images/loading16' + MEDUSA.info.themeSpinner + '.gif" height="16" width="16" />';
-    startVue(); // eslint-disable-line no-undef
+    if (typeof startVue !== 'undefined') { // eslint-disable-line no-undef
+        startVue(); // eslint-disable-line no-undef
+    }
 
     if (navigator.userAgent.indexOf('PhantomJS') === -1) {
         $(document).ready(UTIL.init);
