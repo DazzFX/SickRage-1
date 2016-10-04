@@ -122,7 +122,7 @@ class ShowHandler(BaseRequestHandler):
                     'location': show.raw_location,
                     'flattenFolders': bool(show.flatten_folders),
                     'airs': str(show.airs).replace('am', ' AM').replace('pm', ' PM').replace('  ', ' '),
-                    'dvdorder': bool(show.dvdorder),
+                    'dvdOrder': bool(show.dvdorder),
                     'rlsRequireWords': [w.strip() for w in show.rls_require_words.split(',')] if show.rls_require_words else [],
                     'rlsIgnoreWords': [w.strip() for w in show.rls_ignore_words.split(',')] if show.rls_ignore_words else [],
                     'scene': bool(show.scene),

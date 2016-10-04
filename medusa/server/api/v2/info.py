@@ -91,7 +91,9 @@ class InfoHandler(BaseRequestHandler):
             'githubUrl': app.GITHUB_IO_URL,
             'wikiUrl': app.WIKI_URL,
             'sourceUrl': app.APPLICATION_URL,
-            'displayAllSeasons': app.DISPLAY_ALL_SEASONS
+            'displayAllSeasons': app.DISPLAY_ALL_SEASONS,
+            'displayShowSpecials': app.DISPLAY_SHOW_SPECIALS,
+            'useSubtitles': app.USE_SUBTITLES
         }
 
         if info_query:
