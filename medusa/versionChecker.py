@@ -91,7 +91,7 @@ class CheckVersion(object):
         logger.log(u"Config backup in progress...")
         ui.notifications.message('Backup', 'Config backup in progress...')
         try:
-            backupDir = ek(os.path.join, app.DATA_DIR, 'backup')
+            backupDir = ek(os.path.join, app.DATA_DIR, app.BACKUP_DIR)
             if not ek(os.path.isdir, backupDir):
                 ek(os.mkdir, backupDir)
 
