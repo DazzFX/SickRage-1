@@ -20,7 +20,7 @@ from ..helper.encoding import ek
 from ..helpers import create_https_certificates, generateApiKey
 
 
-class SRWebServer(threading.Thread):  # pylint: disable=too-many-instance-attributes
+class AppWebServer(threading.Thread):  # pylint: disable=too-many-instance-attributes
     def __init__(self, options=None, io_loop=None):
         threading.Thread.__init__(self)
         self.daemon = True

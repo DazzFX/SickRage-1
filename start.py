@@ -93,7 +93,7 @@ import medusa as app
 from medusa import db, failed_history, logger, name_cache, network_timezones
 from medusa.event_queue import Events
 from medusa.helper.encoding import ek
-from medusa.server.core import SRWebServer
+from medusa.server.core import AppWebServer
 from medusa.tv import TVShow
 
 import shutil_custom  # pylint: disable=import-error
@@ -362,7 +362,7 @@ class Application(object):
         }
 
         # start web server
-        self.web_server = SRWebServer(self.web_options)
+        self.web_server = AppWebServer(self.web_options)
         self.web_server.start()
 
         # Fire up all our threads
